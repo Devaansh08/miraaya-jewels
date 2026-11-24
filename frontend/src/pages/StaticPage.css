@@ -1,0 +1,591 @@
+/* ══ STATIC & iOS FAQ STYLES ══ */
+
+.static-page {
+  padding-bottom: 90px;
+}
+
+.static-page__hero {
+  position: relative;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.static-page__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(17, 16, 15, 0.75) 0%, rgba(17, 16, 15, 0.45) 100%);
+}
+
+.static-page__hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+}
+
+.static-page__hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.static-page__hero-sub {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.static-page__body {
+  padding-top: 60px;
+}
+
+/* ── About Section ── */
+.about-section {
+  margin-bottom: 56px;
+}
+
+.about-section h2 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.about-section h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.about-value-card {
+  padding: 32px 28px;
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  transition: all var(--transition-bounce);
+}
+
+.about-value-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: var(--shadow-sm);
+}
+
+.about-value-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.about-value-card p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ── Contact Section ── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #fff;
+  padding: 36px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.form-input,
+.form-textarea {
+  padding: 13px 18px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: var(--ink);
+  background: var(--ivory);
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.form-input:focus, .form-textarea:focus {
+  border-color: var(--gold);
+  background: #fff;
+  box-shadow: 0 0 0 4px var(--gold-glow);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-info-card {
+  padding: 28px;
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  transition: all var(--transition-fast);
+}
+
+.contact-info-card:hover {
+  border-color: var(--gold);
+}
+
+.contact-info-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  margin-bottom: 8px;
+}
+
+.contact-info-card p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.contact-info-card a {
+  color: var(--gold-dark);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* ═════════════════════════════════════════════════
+   iOS CUERTINO SETTINGS / SUPPORT FAQ STYLES
+   ═════════════════════════════════════════════════ */
+
+.faq-page {
+  background: radial-gradient(circle at 50% 0%, rgba(248, 237, 224, 0.5) 0%, var(--ivory) 100%);
+  padding-bottom: 100px;
+}
+
+.ios-faq-hero {
+  padding: 60px 0 36px;
+  text-align: center;
+}
+
+.ios-faq-pill {
+  display: inline-block;
+  background: rgba(219, 167, 85, 0.15);
+  color: var(--gold-dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 14px;
+}
+
+.ios-faq-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.ios-faq-sub {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 680px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+
+/* ── iOS Cupertino Search Bar ── */
+.ios-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 620px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1.5px solid var(--line);
+  padding: 12px 20px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 20px rgba(17, 16, 15, 0.06);
+  transition: all var(--transition-fast);
+}
+
+.ios-search-bar:focus-within {
+  border-color: var(--gold);
+  box-shadow: 0 6px 24px var(--gold-glow);
+}
+
+.ios-search-icon {
+  color: var(--gold-dark);
+  flex-shrink: 0;
+}
+
+.ios-search-input {
+  flex: 1;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: var(--ink);
+  outline: none;
+}
+
+.ios-search-clear {
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+}
+
+/* ── iOS Segmented Pills Bar ── */
+.ios-faq-container {
+  max-width: 920px;
+}
+
+.ios-category-pills {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 12px 4px 24px;
+  margin-bottom: 8px;
+  scrollbar-width: none;
+}
+
+.ios-category-pills::-webkit-scrollbar {
+  display: none;
+}
+
+.ios-cat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #ffffff;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.ios-cat-pill:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.ios-cat-pill--active {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+  box-shadow: 0 4px 14px rgba(17, 16, 15, 0.25);
+}
+
+/* ── iOS Grouped Inset Card ── */
+.ios-faq-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 40px;
+}
+
+.ios-faq-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 28px;
+  background: rgba(248, 237, 224, 0.4);
+  border-bottom: 1px solid var(--line);
+}
+
+.ios-faq-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.ios-faq-card__count {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gold-dark);
+  background: #fff;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--line);
+}
+
+.ios-faq-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.ios-faq-row {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: background var(--transition-fast);
+}
+
+.ios-faq-row:last-child {
+  border-bottom: none;
+}
+
+.ios-faq-row--open {
+  background: rgba(255, 250, 245, 0.6);
+}
+
+.ios-faq-row__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding: 22px 28px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.ios-faq-row__q-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+}
+
+.ios-faq-badge {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: rgba(219, 167, 85, 0.12);
+  color: var(--gold-dark);
+  border: 1px solid rgba(219, 167, 85, 0.3);
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.ios-faq-question-text {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.ios-chevron {
+  color: var(--muted);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ios-chevron--rotated {
+  transform: rotate(180deg);
+  color: var(--gold-dark);
+}
+
+.ios-faq-row__answer {
+  padding: 0 28px 24px 28px;
+  animation: iosExpand 0.22s ease-out;
+}
+
+.ios-faq-row__answer p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.75;
+  background: #fff;
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+@keyframes iosExpand {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ios-faq-empty {
+  text-align: center;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-info-card a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.policy-section {
+  margin-bottom: 36px;
+}
+
+.policy-section h2 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.policy-section ul {
+  padding-left: 24px;
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.policy-section li {
+  font-size: 0.9375rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.ios-faq-empty h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+}
+
+.ios-faq-empty p {
+  color: var(--muted);
+  font-size: 0.875rem;
+  margin-bottom: 8px;
+}
+
+/* ── Concierge Support Card (iOS Glass Banner) ── */
+.ios-support-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  background: linear-gradient(135deg, #181512 0%, #292015 100%);
+  color: #fff;
+  padding: 36px 40px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1.5px solid rgba(219, 167, 85, 0.3);
+}
+
+.ios-support-pill {
+  display: inline-block;
+  background: rgba(219, 167, 85, 0.2);
+  color: var(--gold-light);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: 10px;
+}
+
+.ios-support-title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.ios-support-sub {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  max-width: 480px;
+}
+
+.ios-support-card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.ios-support-btn {
+  width: 230px;
+  justify-content: center;
+  padding: 13px 20px;
+  font-size: 0.8125rem;
+  border-radius: var(--radius-full);
+}
+
+.ios-support-card__actions .btn-outline {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.ios-support-card__actions .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 900px) {
+  .ios-support-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 24px;
+  }
+  .ios-support-sub {
+    max-width: 100%;
+  }
+  .ios-support-card__actions {
+    width: 100%;
+    align-items: center;
+  }
+  .ios-support-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ios-faq-row__q-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .ios-faq-row__question {
+    padding: 18px 20px;
+  }
+  .ios-faq-row__answer {
+    padding: 0 20px 20px 20px;
+  }
+  .ios-faq-card__header {
+    padding: 16px 20px;
+  }
+  .contact-form {
+    padding: 24px 18px;
+  }
+}

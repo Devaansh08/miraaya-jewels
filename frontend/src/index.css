@@ -1,0 +1,442 @@
+/* =========================================================
+   MIRAAYA JEWELS — Global Stylesheet
+   Enhanced with iOS Smooth Aesthetics, Glassmorphism & Micro-animations
+   ========================================================= */
+
+:root {
+  --ivory: #fffaf5;
+  --cream: #f8ede0;
+  --gold: #dba755;
+  --gold-dark: #b8862d;
+  --gold-light: #f4dfb5;
+  --gold-glow: rgba(219, 167, 85, 0.35);
+  --ink: #11100f;
+  --muted: #71675f;
+  --line: #eaded4;
+  --red: #a52643;
+  --green: #2d8659;
+  --white: #ffffff;
+
+  /* iOS specific tokens */
+  --ios-bg: #f2f2f7;
+  --ios-card: rgba(255, 255, 255, 0.85);
+  --ios-card-solid: #ffffff;
+  --ios-border: rgba(60, 60, 67, 0.12);
+  --ios-secondary-text: #8e8e93;
+  --ios-system-blue: #007aff;
+  --ios-system-green: #34c759;
+  --ios-system-orange: #ff9500;
+
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Jost', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --shadow-sm: 0 2px 8px rgba(17, 16, 15, 0.05);
+  --shadow-md: 0 6px 20px rgba(17, 16, 15, 0.08);
+  --shadow-lg: 0 12px 36px rgba(17, 16, 15, 0.12);
+  --shadow-glow: 0 8px 24px var(--gold-glow);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth !important;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #ede4d8;
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ede4d8;
+  padding: 24px 28px 36px;
+  box-sizing: border-box;
+}
+
+.page-wrap {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--ivory);
+  border-radius: 28px;
+  border: 1px solid rgba(219, 167, 85, 0.28);
+  box-shadow: 0 20px 60px rgba(17, 16, 15, 0.12), 0 2px 10px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: clip;
+}
+
+.topbar {
+  border-radius: 26px 26px 0 0;
+}
+
+.footer {
+  border-radius: 0 0 26px 26px;
+}
+
+@media (max-width: 1200px) {
+  #root {
+    padding: 16px 18px 24px;
+  }
+
+  .page-wrap {
+    border-radius: 22px;
+    min-height: calc(100vh - 40px);
+  }
+
+  .topbar {
+    border-radius: 20px 20px 0 0;
+  }
+
+  .footer {
+    border-radius: 0 0 20px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 10px 10px 18px;
+    background-color: #ede4d8;
+  }
+
+  .page-wrap {
+    border-radius: 18px;
+    border-color: rgba(219, 167, 85, 0.22);
+    box-shadow: 0 10px 32px rgba(17, 16, 15, 0.09);
+    min-height: calc(100vh - 28px);
+  }
+
+  .topbar {
+    border-radius: 16px 16px 0 0;
+  }
+
+  .footer {
+    border-radius: 0 0 16px 16px;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* ── Typography ── */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.18;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  font-weight: 500;
+  color: var(--ink);
+  text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  text-align: center;
+  margin-bottom: 48px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* ── Buttons with iOS haptic feel ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 28px;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-smooth);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, #e5b364 0%, #c48e35 100%);
+  color: var(--white);
+  border: 1px solid var(--gold);
+  box-shadow: 0 4px 14px rgba(219, 167, 85, 0.35);
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #d39f4d 0%, #b37e28 100%);
+  box-shadow: 0 6px 20px rgba(219, 167, 85, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.4);
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+  backdrop-filter: blur(8px);
+}
+
+.btn-outline:hover {
+  background: var(--ink);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(17, 16, 15, 0.2);
+}
+
+.btn-outline-gold {
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--gold-dark);
+  border: 1.5px solid var(--gold);
+}
+
+.btn-outline-gold:hover {
+  background: var(--gold);
+  color: var(--white);
+  box-shadow: 0 4px 14px var(--gold-glow);
+}
+
+/* ── Badges ── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-radius: var(--radius-xs);
+  backdrop-filter: blur(6px);
+}
+
+.badge-sale {
+  background: linear-gradient(135deg, #b82c4b 0%, #8c1e36 100%);
+  color: var(--white);
+  box-shadow: 0 2px 8px rgba(165, 38, 67, 0.3);
+}
+
+.badge-gold {
+  background: rgba(219, 167, 85, 0.15);
+  color: var(--gold-dark);
+  border: 1px solid rgba(219, 167, 85, 0.4);
+}
+
+.badge-green {
+  background: rgba(45, 134, 89, 0.12);
+  color: var(--green);
+  border: 1px solid rgba(45, 134, 89, 0.3);
+}
+
+/* ── Elegant Gold Divider ── */
+.divider {
+  width: 56px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 16px auto 32px;
+  border-radius: 2px;
+}
+
+/* ── Smooth Floating Back to Top Button ── */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 28px;
+  right: max(24px, calc((100vw - 1400px) / 2 + 28px));
+  z-index: 1050;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  background: rgba(17, 16, 15, 0.88);
+  color: #fff;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(219, 167, 85, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all var(--transition-bounce);
+  animation: floatUp 0.3s ease;
+}
+
+.back-to-top-btn:hover {
+  background: var(--gold-dark);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 28px rgba(219, 167, 85, 0.5);
+}
+
+.back-to-top-btn:active {
+  transform: scale(0.95);
+}
+
+@keyframes floatUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Loading Spinner ── */
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(219, 167, 85, 0.2);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+main {
+  flex: 1;
+}
+
+/* ── Toast Notifications ── */
+.Toastify__toast {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-lg) !important;
+  backdrop-filter: blur(16px);
+}
+
+/* ── Custom Luxury Gold Scrollbar ── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ivory);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #e3c491 0%, #dba755 100%);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-dark);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ivory);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Miraaya Jewels — Timeless Elegance",
+  "short_name": "Miraaya Jewels",
+  "description": "Handcrafted Indian luxury jewelry, bridal polki, kundan necklaces, bangles, and earrings.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffaf5",
+  "theme_color": "#11100f",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

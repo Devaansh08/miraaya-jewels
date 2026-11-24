@@ -1,0 +1,352 @@
+/* ══ AUTH STYLES (iOS Frosted Glass Aesthetics) ══ */
+
+.auth-page {
+  min-height: calc(100vh - 80px);
+  background: radial-gradient(circle at 50% 20%, rgba(248, 237, 224, 0.6) 0%, var(--ivory) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 460px;
+  border-radius: var(--radius-xl);
+  padding: 40px 36px;
+  box-shadow: 0 16px 48px rgba(17, 16, 15, 0.1);
+  text-align: center;
+  border: 1px solid rgba(219, 167, 85, 0.3);
+}
+
+/* ── iOS Segmented Switcher ── */
+.ios-segmented-control {
+  display: flex;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 4px;
+  border-radius: var(--radius-full);
+  margin-bottom: 28px;
+}
+
+.ios-segment-btn {
+  flex: 1;
+  padding: 8px 16px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  color: var(--muted);
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.ios-segment-btn--active {
+  background: var(--white);
+  color: var(--ink);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Brand */
+.auth-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.auth-brand__crown {
+  font-size: 1.6rem;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.auth-brand__name {
+  font-family: var(--font-heading);
+  font-size: 1.9rem;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.auth-brand__tag {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  font-weight: 600;
+}
+
+.auth-title {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.auth-sub {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+/* ── Social Login Buttons ── */
+.social-auth-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.social-auth-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+}
+
+.social-auth-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.social-auth-btn--apple {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.social-auth-btn--apple:hover {
+  background: #222;
+}
+
+.social-icon {
+  font-size: 1.1rem;
+}
+
+/* Divider Line */
+.auth-divider-line {
+  position: relative;
+  text-align: center;
+  margin: 20px 0 24px;
+}
+
+.auth-divider-line::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--line);
+}
+
+.auth-divider-line span {
+  position: relative;
+  background: #fff;
+  padding: 0 14px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* Form */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: left;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.auth-field-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.auth-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.auth-forgot-link {
+  font-size: 0.75rem;
+  color: var(--gold-dark);
+  font-weight: 500;
+}
+
+.auth-forgot-link:hover {
+  text-decoration: underline;
+}
+
+.auth-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.auth-field-icon {
+  position: absolute;
+  left: 14px;
+  color: var(--muted);
+}
+
+.auth-input {
+  width: 100%;
+  padding: 13px 44px 13px 40px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: var(--ink);
+  background: var(--ivory);
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.auth-input:focus {
+  border-color: var(--gold);
+  background: #fff;
+  box-shadow: 0 0 0 4px var(--gold-glow);
+}
+
+.auth-input-wrap .auth-input {
+  padding-right: 44px;
+}
+
+.auth-toggle-pass {
+  position: absolute;
+  right: 14px;
+  color: var(--muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.auth-toggle-pass:hover {
+  color: var(--ink);
+}
+
+/* ── iOS Toggle Switch ── */
+.ios-switch-row {
+  margin: 4px 0;
+}
+
+.ios-switch-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.ios-switch-input {
+  display: none;
+}
+
+.ios-switch-slider {
+  width: 40px;
+  height: 22px;
+  background: #e5e5ea;
+  border-radius: 20px;
+  position: relative;
+  transition: background 0.25s ease;
+}
+
+.ios-switch-slider::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ios-switch-input:checked + .ios-switch-slider {
+  background: var(--gold-dark);
+}
+
+.ios-switch-input:checked + .ios-switch-slider::before {
+  transform: translateX(18px);
+}
+
+.ios-switch-text {
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.auth-terms-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.auth-terms-label a {
+  color: var(--gold-dark);
+  text-decoration: underline;
+}
+
+.auth-submit {
+  width: 100%;
+  padding: 15px;
+  font-size: 0.875rem;
+  border-radius: var(--radius-sm);
+  margin-top: 6px;
+}
+
+/* Benefits pill bar */
+.auth-benefits {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 22px 0 16px;
+  padding: 12px 14px;
+  background: var(--cream);
+  border-radius: var(--radius-sm);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--ink);
+  flex-wrap: wrap;
+}
+
+.auth-switch {
+  margin-top: 16px;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.auth-switch a {
+  color: var(--gold-dark);
+  font-weight: 600;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 30px 20px;
+  }
+}
