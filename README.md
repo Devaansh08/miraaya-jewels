@@ -171,20 +171,28 @@ git push -u origin main
 
 ## ☁️ How to Deploy for FREE (100% Free Hosting)
 
-### 1. Frontend Deployment on Vercel (Recommended)
-1. Push your repository to GitHub.
-2. Sign in to [Vercel](https://vercel.com/) with your GitHub account.
-3. Click **"Add New Project"** and import the `miraaya-jewels` repository.
-4. In the project setup settings:
-   - **Root Directory:** Click edit and choose `frontend`.
-   - **Framework Preset:** Vite.
-   - **Build Command:** `npm run build`
-   - **Output Directory:** `dist`
-5. Under **Environment Variables**, add:
+### 1. Instant Vercel Deployment (Pre-Configured Monorepo)
+
+This repository is already configured with root `vercel.json`, `api/index.js`, and SPA route rewrites. You can deploy it in two ways:
+
+#### Option A: One-Command Terminal Deployment (Fastest)
+1. In your VS Code terminal, run:
+   ```bash
+   npx vercel
    ```
-   VITE_API_URL = https://your-backend-app.onrender.com
+2. Follow the 3 brief prompts (Login with GitHub/Email, confirm project settings by pressing `Enter`).
+3. Deploy to production:
+   ```bash
+   npx vercel --prod
    ```
-6. Click **Deploy**. Your frontend is live with automatic SSL in under 60 seconds!
+4. Your site will be live instantly with a `https://*.vercel.app` URL!
+
+#### Option B: GitHub + Vercel Dashboard (Continuous Deployment)
+1. Push your code to GitHub (see section below).
+2. Go to [vercel.com](https://vercel.com/) and sign in with GitHub.
+3. Click **"Add New Project"** and select your `miraaya-jewels` repository.
+4. Leave all default settings as they are (Vercel automatically detects the root configuration and builds the frontend).
+5. Click **Deploy**. Your luxury jewellery boutique is live in under 60 seconds with automatic SSL and global CDN!
 
 ---
 
