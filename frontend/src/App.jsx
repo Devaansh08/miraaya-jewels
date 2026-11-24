@@ -7,6 +7,7 @@ import { AuthProvider } from './context/AuthContext'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import BackToTop from './components/BackToTop'
+import WhatsAppButton from './components/WhatsAppButton'
 
 import Home from './pages/Home'
 import Shop from './pages/Shop'
@@ -54,6 +55,7 @@ function App() {
               </main>
               <Footer />
               <BackToTop />
+              <WhatsAppButton />
             </div>
           </WishlistProvider>
         </CartProvider>

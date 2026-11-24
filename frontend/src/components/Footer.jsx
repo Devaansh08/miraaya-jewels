@@ -4,6 +4,7 @@ import {
   FiInstagram, FiFacebook, FiYoutube, FiPhone, FiMail,
   FiMapPin, FiTruck, FiShield, FiCreditCard, FiAward, FiClock
 } from 'react-icons/fi'
+import { FaWhatsapp } from 'react-icons/fa'
 import './Footer.css'
 
 export default function Footer() {
@@ -120,6 +121,17 @@ export default function Footer() {
                 <li>
                   <FiPhone size={15} style={{ color: 'var(--gold)' }} />
                   <a href="tel:8076428336">+91 80764 28336</a>
+                </li>
+                <li>
+                  <FaWhatsapp size={15} style={{ color: '#25D366' }} />
+                  <a
+                    href="https://wa.me/918076428336?text=Hello%20Miraaya%20Jewels!%20I%20have%20an%20inquiry%20regarding%20jewellery%20or%20business%20orders."
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ color: '#25D366', fontWeight: 600 }}
+                  >
+                    WhatsApp Chat &amp; Business
+                  </a>
                 </li>
                 <li>
                   <FiMail size={15} style={{ color: 'var(--gold)' }} />

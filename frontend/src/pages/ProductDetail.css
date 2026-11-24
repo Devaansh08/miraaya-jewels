@@ -208,6 +208,31 @@
   box-shadow: 0 6px 20px var(--gold-glow);
 }
 
+.pd-cta-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #ffffff;
+  padding: 16px 22px;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.pd-cta-whatsapp:hover {
+  background: linear-gradient(135deg, #20ba5a 0%, #0e7266 100%);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45);
+}
+
 .pd-wishlist-btn,
 .pd-share-btn {
   display: flex;

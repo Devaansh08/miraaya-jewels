@@ -174,7 +174,7 @@ export default function Home() {
                 <div className="hero__showcase-top-bar">
                   <div className="hero__showcase-badge">
                     <span className="live-dot" />
-                    <span>ROYAL REEL · NECKLACE FLAUNT</span>
+                    <span>ROYAL REEL · NECKLACE SPOTLIGHT</span>
                   </div>
                   <button
                     className="hero__video-toggle-btn"
@@ -187,9 +187,9 @@ export default function Home() {
                   </button>
                 </div>
                 <div className="hero__showcase-footer">
-                  <span className="hero__showcase-pill-tag">✨ Model in Crimson Silk Saree · Flaunting Bridal Necklace</span>
+                  <span className="hero__showcase-pill-tag">✨ Model in Crimson Silk Saree · Neckpiece Detail</span>
                   <span className="hero__showcase-title">Triple Layer Kundan Necklace Set</span>
-                  <span className="hero__showcase-desc">💎 100% Certified 22K Gold Finish · Heritage Polki Pearls</span>
+                  <span className="hero__showcase-desc">💎 100% Certified 22K Gold Finish · Handcrafted Heirlooms</span>
                   <Link to="/product/triple-layer-kundan-necklace-set" className="hero__showcase-shop-btn">
                     <span>Explore This Necklace 🛍️</span>
                   </Link>

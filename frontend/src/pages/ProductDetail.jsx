@@ -8,6 +8,7 @@ import {
   FiHeart, FiShoppingBag, FiMinus, FiPlus, FiArrowLeft, FiShare2,
   FiTruck, FiShield, FiClock, FiCheck, FiMapPin, FiGift
 } from 'react-icons/fi'
+import { FaWhatsapp } from 'react-icons/fa'
 import ProductCard from '../components/ProductCard'
 import './ProductDetail.css'
 
@@ -153,6 +154,16 @@ export default function ProductDetail() {
               <FiShoppingBag size={18} />
               <span>Add to Bag 🛍️</span>
             </button>
+            <a
+              href={`https://wa.me/918076428336?text=${encodeURIComponent(`Hello Miraaya Jewels! I am inquiring about "${product.name}" (₹${product.price?.toLocaleString('en-IN')}). Can you assist me with availability, styling advice, or business order?`)}`}
+              target="_blank"
+              rel="noreferrer"
+              className="pd-cta-whatsapp"
+              title="Inquire about this piece on WhatsApp"
+            >
+              <FaWhatsapp size={18} />
+              <span>Inquire 💬</span>
+            </a>
             <button
               className={`pd-wishlist-btn ${wishlisted ? 'pd-wishlist-btn--active' : ''}`}
               onClick={() => { toggle(product); toast.info(wishlisted ? 'Removed from saved pieces' : 'Saved to wishlist 💖') }}
