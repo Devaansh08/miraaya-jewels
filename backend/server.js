@@ -161,11 +161,16 @@ process.on('unhandledRejection', (reason) => {
 })
 
 const PORT = process.env.PORT || 5000
-const server = app.listen(PORT, () => {
-  console.log(`🚀 Miraaya Jewels API running at http://localhost:${PORT}`)
-  console.log(`   Health check: http://localhost:${PORT}/api/health`)
-})
 
-// Configure HTTP keep-alive timeouts for high concurrent traffic throughput
-server.keepAliveTimeout = 65000
-server.headersTimeout = 66000
+if (require.main === module) {
+  const server = app.listen(PORT, () => {
+    console.log(`🚀 Miraaya Jewels API running at http://localhost:${PORT}`)
+    console.log(`   Health check: http://localhost:${PORT}/api/health`)
+  })
+
+  // Configure HTTP keep-alive timeouts for high concurrent traffic throughput
+  server.keepAliveTimeout = 65000
+  server.headersTimeout = 66000
+}
+
+module.exports = app
