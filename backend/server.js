@@ -95,10 +95,12 @@ function cacheMiddleware(durationSeconds = 60) {
 
     if (cachedItem && now < cachedItem.expireAt) {
       res.setHeader('X-Cache', 'HIT')
+      res.setHeader('Cache-Control', `public, max-age=${durationSeconds}, stale-while-revalidate=300`)
       return res.json(cachedItem.data)
     }
 
     res.setHeader('X-Cache', 'MISS')
+    res.setHeader('Cache-Control', `public, max-age=${durationSeconds}, stale-while-revalidate=300`)
     const originalJson = res.json.bind(res)
     res.json = (body) => {
       if (res.statusCode >= 200 && res.statusCode < 300) {

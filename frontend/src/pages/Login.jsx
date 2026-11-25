@@ -32,38 +32,40 @@ export default function Login() {
 
   return (
     <div className="auth-page">
-      <div className="auth-card ios-card">
-        {/* iOS Segmented Pill Switcher */}
-        <div className="ios-segmented-control">
-          <button className="ios-segment-btn ios-segment-btn--active">Sign In</button>
-          <Link to="/register" className="ios-segment-btn">Create Account</Link>
-        </div>
+      <div className="auth-card">
+        {/* Authentic Brand Header */}
+        <Link to="/" className="auth-brand" aria-label="Miraaya Jewels Home">
+          <span className="auth-brand__name">Miraaya</span>
+          <span className="auth-brand__sub">JEWELS</span>
+          <span className="auth-brand__tag">Royal Club &amp; Concierge</span>
+        </Link>
+        <div className="divider" style={{ margin: '14px auto 22px' }} />
 
-        <div className="auth-brand">
-          <div className="auth-brand__crown">
-            <FiShield size={24} style={{ color: 'var(--gold-dark)' }} />
-          </div>
-          <span className="auth-brand__name">Miraaya Jewels</span>
-          <span className="auth-brand__tag">Royal Club &amp; Order Concierge</span>
+        {/* Royal Luxury Tabs */}
+        <div className="auth-tabs">
+          <span className="auth-tab auth-tab--active">Sign In</span>
+          <Link to="/register" className="auth-tab">Create Account</Link>
         </div>
 
         <h1 className="auth-title">Welcome Back</h1>
-        <p className="auth-sub">Access your orders, saved heirlooms, and member-only festive prices.</p>
+        <p className="auth-sub">Access your saved heirlooms, personalized styling, and member-only rewards.</p>
 
-        {/* ── Social Login Buttons (Apple & Google) ── */}
+        {/* ── Social Login Buttons ── */}
         <div className="social-auth-group">
           <button
             type="button"
-            className="social-auth-btn social-auth-btn--apple"
+            className="social-auth-btn"
             onClick={() => handleSocialLogin('Apple ID')}
           >
+            <FiShield size={15} className="social-auth-icon" />
             <span>Continue with Apple</span>
           </button>
           <button
             type="button"
-            className="social-auth-btn social-auth-btn--google"
+            className="social-auth-btn"
             onClick={() => handleSocialLogin('Google')}
           >
+            <FiShield size={15} className="social-auth-icon" />
             <span>Continue with Google</span>
           </button>
         </div>
@@ -114,17 +116,15 @@ export default function Login() {
             </div>
           </div>
 
-          {/* iOS Toggle Switch */}
-          <div className="ios-switch-row">
-            <label className="ios-switch-label">
+          <div className="auth-remember-row">
+            <label className="auth-checkbox-label">
               <input
                 type="checkbox"
                 checked={form.remember}
                 onChange={e => setForm(f => ({ ...f, remember: e.target.checked }))}
-                className="ios-switch-input"
+                className="auth-checkbox"
               />
-              <span className="ios-switch-slider" />
-              <span className="ios-switch-text">Remember me on this device</span>
+              <span>Remember me on this device</span>
             </label>
           </div>
 
@@ -136,15 +136,11 @@ export default function Login() {
 
         {/* Member Benefits Footer */}
         <div className="auth-benefits">
-          <div className="auth-benefit-item">
-            <span>Same-Day NCR Tracking</span>
-          </div>
-          <div className="auth-benefit-item">
-            <span>10% Off First Purchase</span>
-          </div>
-          <div className="auth-benefit-item">
-            <span>Exclusive VIP Drops</span>
-          </div>
+          <span>Same-Day NCR Tracking</span>
+          <span>·</span>
+          <span>10% Off First Order</span>
+          <span>·</span>
+          <span>VIP Festive Drops</span>
         </div>
 
         <p className="auth-switch">

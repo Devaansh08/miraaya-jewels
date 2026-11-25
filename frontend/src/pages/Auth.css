@@ -1,134 +1,145 @@
-/* ══ AUTH STYLES (iOS Frosted Glass Aesthetics) ══ */
+/* ══ MIRAAYA JEWELS — ROYAL AUTHENTIC AUTH THEME ══ */
 
 .auth-page {
-  min-height: calc(100vh - 80px);
-  background: radial-gradient(circle at 50% 20%, rgba(248, 237, 224, 0.6) 0%, var(--ivory) 100%);
+  min-height: calc(100vh - 120px);
+  background: var(--ivory);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px 20px;
+  padding: 60px 20px;
 }
 
 .auth-card {
   width: 100%;
-  max-width: 460px;
+  max-width: 480px;
+  background: #ffffff;
   border-radius: var(--radius-xl);
-  padding: 40px 36px;
-  box-shadow: 0 16px 48px rgba(17, 16, 15, 0.1);
+  padding: 48px 40px;
+  box-shadow: 0 20px 60px rgba(17, 16, 15, 0.08), 0 0 30px rgba(219, 167, 85, 0.12);
+  border: 1.5px solid rgba(219, 167, 85, 0.35);
   text-align: center;
-  border: 1px solid rgba(219, 167, 85, 0.3);
+  position: relative;
 }
 
-/* ── iOS Segmented Switcher ── */
-.ios-segmented-control {
-  display: flex;
-  background: rgba(0, 0, 0, 0.05);
-  padding: 4px;
-  border-radius: var(--radius-full);
-  margin-bottom: 28px;
-}
-
-.ios-segment-btn {
-  flex: 1;
-  padding: 8px 16px;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  border-radius: var(--radius-full);
-  color: var(--muted);
-  transition: all var(--transition-fast);
-  text-align: center;
-}
-
-.ios-segment-btn--active {
-  background: var(--white);
-  color: var(--ink);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Brand */
+/* Authentic Brand Header */
 .auth-brand {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
-}
-
-.auth-brand__crown {
-  font-size: 1.6rem;
+  text-decoration: none;
   line-height: 1;
-  margin-bottom: 4px;
 }
 
 .auth-brand__name {
   font-family: var(--font-heading);
-  font-size: 1.9rem;
+  font-size: 2.6rem;
+  font-weight: 400;
   color: var(--ink);
-  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.auth-brand__sub {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  color: var(--gold);
+  margin-top: 3px;
 }
 
 .auth-brand__tag {
-  font-size: 0.72rem;
-  letter-spacing: 0.15em;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold-dark);
   font-weight: 600;
+  margin-top: 8px;
+}
+
+/* Luxury Tab Switcher */
+.auth-tabs {
+  display: flex;
+  background: var(--cream);
+  padding: 5px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(219, 167, 85, 0.28);
+  margin-bottom: 24px;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 10px 18px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  color: var(--muted);
+  transition: all var(--transition-fast);
+  text-align: center;
+  text-decoration: none;
+}
+
+.auth-tab:hover {
+  color: var(--ink);
+}
+
+.auth-tab--active {
+  background: linear-gradient(135deg, #e5b364 0%, #c48e35 100%);
+  color: var(--white) !important;
+  box-shadow: 0 4px 14px rgba(219, 167, 85, 0.35);
 }
 
 .auth-title {
   font-family: var(--font-heading);
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 500;
-  margin-bottom: 6px;
+  color: var(--ink);
+  margin-bottom: 8px;
 }
 
 .auth-sub {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   color: var(--muted);
-  line-height: 1.5;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* Social Buttons */
+.social-auth-group {
+  display: flex;
+  gap: 12px;
   margin-bottom: 24px;
 }
 
-/* ── Social Login Buttons ── */
-.social-auth-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 22px;
-}
-
 .social-auth-btn {
-  display: flex;
+  flex: 1;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 12px 20px;
-  border-radius: var(--radius-md);
-  font-size: 0.875rem;
+  gap: 8px;
+  padding: 11px 16px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
   font-weight: 600;
   cursor: pointer;
   transition: all var(--transition-fast);
-  border: 1px solid var(--line);
-  background: #fff;
+  border: 1px solid rgba(219, 167, 85, 0.3);
+  background: var(--ivory);
   color: var(--ink);
 }
 
 .social-auth-btn:hover {
+  background: #ffffff;
+  border-color: var(--gold);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 6px 18px rgba(219, 167, 85, 0.2);
 }
 
-.social-auth-btn--apple {
-  background: #000;
-  color: #fff;
-  border-color: #000;
-}
-
-.social-auth-btn--apple:hover {
-  background: #222;
-}
-
-.social-icon {
-  font-size: 1.1rem;
+.social-auth-icon {
+  color: var(--gold-dark);
 }
 
 /* Divider Line */
@@ -145,15 +156,17 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: var(--line);
+  background: linear-gradient(90deg, transparent, rgba(219, 167, 85, 0.35), transparent);
 }
 
 .auth-divider-line span {
   position: relative;
-  background: #fff;
-  padding: 0 14px;
+  background: #ffffff;
+  padding: 0 16px;
   font-size: 0.75rem;
   color: var(--muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 /* Form */
@@ -177,8 +190,8 @@
 }
 
 .auth-label {
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink);
   font-weight: 600;
@@ -203,13 +216,13 @@
 .auth-field-icon {
   position: absolute;
   left: 14px;
-  color: var(--muted);
+  color: var(--gold-dark);
 }
 
 .auth-input {
   width: 100%;
-  padding: 13px 44px 13px 40px;
-  border: 1.5px solid var(--line);
+  padding: 13px 44px 13px 42px;
+  border: 1.5px solid rgba(219, 167, 85, 0.3);
   border-radius: var(--radius-sm);
   font-family: var(--font-body);
   font-size: 0.9375rem;
@@ -221,12 +234,8 @@
 
 .auth-input:focus {
   border-color: var(--gold);
-  background: #fff;
+  background: #ffffff;
   box-shadow: 0 0 0 4px var(--gold-glow);
-}
-
-.auth-input-wrap .auth-input {
-  padding-right: 44px;
 }
 
 .auth-toggle-pass {
@@ -242,55 +251,21 @@
   color: var(--ink);
 }
 
-/* ── iOS Toggle Switch ── */
-.ios-switch-row {
-  margin: 4px 0;
+.auth-remember-row {
+  margin: 2px 0 6px;
 }
 
-.ios-switch-label {
-  display: flex;
+.auth-checkbox-label {
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: var(--muted);
   cursor: pointer;
 }
 
-.ios-switch-input {
-  display: none;
-}
-
-.ios-switch-slider {
-  width: 40px;
-  height: 22px;
-  background: #e5e5ea;
-  border-radius: 20px;
-  position: relative;
-  transition: background 0.25s ease;
-}
-
-.ios-switch-slider::before {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.ios-switch-input:checked+.ios-switch-slider {
-  background: var(--gold-dark);
-}
-
-.ios-switch-input:checked+.ios-switch-slider::before {
-  transform: translateX(18px);
-}
-
-.ios-switch-text {
-  font-size: 0.8125rem;
-  color: var(--muted);
+.auth-checkbox {
+  accent-color: var(--gold-dark);
 }
 
 .auth-terms-label {
@@ -300,6 +275,7 @@
   font-size: 0.78rem;
   color: var(--muted);
   cursor: pointer;
+  line-height: 1.45;
 }
 
 .auth-terms-label a {
@@ -309,25 +285,29 @@
 
 .auth-submit {
   width: 100%;
-  padding: 15px;
-  font-size: 0.875rem;
-  border-radius: var(--radius-sm);
-  margin-top: 6px;
+  padding: 14px 24px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 8px;
 }
 
-/* Benefits pill bar */
+/* Benefits Banner */
 .auth-benefits {
   display: flex;
-  justify-content: space-between;
-  gap: 8px;
-  margin: 22px 0 16px;
-  padding: 12px 14px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 28px 0 16px;
+  padding: 12px 16px;
   background: var(--cream);
+  border: 1px solid rgba(219, 167, 85, 0.25);
   border-radius: var(--radius-sm);
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   font-weight: 600;
   color: var(--ink);
-  flex-wrap: wrap;
+  letter-spacing: 0.02em;
 }
 
 .auth-switch {
@@ -345,8 +325,15 @@
   text-decoration: underline;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   .auth-card {
-    padding: 30px 20px;
+    padding: 34px 22px;
+  }
+  .social-auth-group {
+    flex-direction: column;
+  }
+  .auth-benefits {
+    flex-direction: column;
+    gap: 6px;
   }
 }

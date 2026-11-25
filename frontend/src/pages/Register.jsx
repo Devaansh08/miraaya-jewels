@@ -41,38 +41,40 @@ export default function Register() {
 
   return (
     <div className="auth-page">
-      <div className="auth-card ios-card">
-        {/* iOS Segmented Pill Switcher */}
-        <div className="ios-segmented-control">
-          <Link to="/login" className="ios-segment-btn">Sign In</Link>
-          <button className="ios-segment-btn ios-segment-btn--active">Create Account</button>
-        </div>
-
-        <div className="auth-brand">
-          <div className="auth-brand__crown">
-            <FiShield size={24} style={{ color: 'var(--gold-dark)' }} />
-          </div>
-          <span className="auth-brand__name">Miraaya Jewels</span>
+      <div className="auth-card">
+        {/* Authentic Brand Header */}
+        <Link to="/" className="auth-brand" aria-label="Miraaya Jewels Home">
+          <span className="auth-brand__name">Miraaya</span>
+          <span className="auth-brand__sub">JEWELS</span>
           <span className="auth-brand__tag">Unlock Royalty &amp; Exclusive Pricing</span>
+        </Link>
+        <div className="divider" style={{ margin: '14px auto 22px' }} />
+
+        {/* Royal Luxury Tabs */}
+        <div className="auth-tabs">
+          <Link to="/login" className="auth-tab">Sign In</Link>
+          <span className="auth-tab auth-tab--active">Create Account</span>
         </div>
 
         <h1 className="auth-title">Join Miraaya Club</h1>
-        <p className="auth-sub">Enjoy complimentary gift packaging, birthday treats, and express checkout.</p>
+        <p className="auth-sub">Enjoy complimentary velvet gift packaging, birthday gifts, and priority dispatch.</p>
 
         {/* ── Social Register Buttons ── */}
         <div className="social-auth-group">
           <button
             type="button"
-            className="social-auth-btn social-auth-btn--apple"
+            className="social-auth-btn"
             onClick={() => handleSocialRegister('Apple ID')}
           >
+            <FiShield size={15} className="social-auth-icon" />
             <span>Sign up with Apple</span>
           </button>
           <button
             type="button"
-            className="social-auth-btn social-auth-btn--google"
+            className="social-auth-btn"
             onClick={() => handleSocialRegister('Google')}
           >
+            <FiShield size={15} className="social-auth-icon" />
             <span>Sign up with Google</span>
           </button>
         </div>

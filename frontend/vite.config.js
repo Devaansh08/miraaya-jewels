@@ -12,6 +12,17 @@ export default defineConfig({
         changeOrigin: true,
       }
     }
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'vendor-icons': ['react-icons']
+        }
+      }
+    },
+    chunkSizeWarningLimit: 600
   }
 })
 

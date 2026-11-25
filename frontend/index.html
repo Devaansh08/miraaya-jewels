@@ -57,6 +57,10 @@
     }
     </script>
 
+    <!-- Performance: Preload Critical Hero Image & Poster for Instant Paint -->
+    <link rel="preload" as="image" href="/images/banner/hero-banner.jpg" fetchpriority="high" />
+    <link rel="dns-prefetch" href="http://localhost:5000" />
+
     <!-- Google Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

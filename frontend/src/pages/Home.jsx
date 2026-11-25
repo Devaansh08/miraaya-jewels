@@ -265,7 +265,7 @@ export default function Home() {
                 className="category-card"
               >
                 <div className="category-card__img-wrap">
-                  <img src={cat.img} alt={cat.name} className="category-card__img" loading="lazy" />
+                  <img src={cat.img} alt={cat.name} className="category-card__img" loading="lazy" decoding="async" />
                   <span className="category-card__tag">{cat.tag}</span>
                 </div>
                 <div className="category-card__label-wrap">
@@ -309,7 +309,7 @@ export default function Home() {
             {OCCASIONS.map(occ => (
               <div className="occasion-card" key={occ.label}>
                 <div className="occasion-card__img-wrap">
-                  <img src={occ.img} alt={occ.label} className="occasion-card__img" loading="lazy" />
+                  <img src={occ.img} alt={occ.label} className="occasion-card__img" loading="lazy" decoding="async" />
                   <div className="occasion-card__overlay" />
                 </div>
                 <div className="occasion-card__info">

@@ -52,6 +52,7 @@ export default function ProductCard({ product }) {
             className="product-card__image"
             onError={() => setImgError(true)}
             loading="lazy"
+            decoding="async"
           />
         </Link>
 

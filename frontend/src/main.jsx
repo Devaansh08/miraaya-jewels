@@ -5,6 +5,10 @@ import App from './App.jsx'
 import './index.css'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { setupAxiosCache } from './utils/apiCache'
+
+// Initialize ultra-fast client-side caching for instant page loads
+setupAxiosCache()
 
 if (import.meta.env.VITE_API_URL) {
   axios.defaults.baseURL = import.meta.env.VITE_API_URL
