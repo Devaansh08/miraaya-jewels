@@ -6,7 +6,7 @@ import { useWishlist } from '../context/WishlistContext'
 import { toast } from 'react-toastify'
 import {
   FiHeart, FiShoppingBag, FiMinus, FiPlus, FiArrowLeft, FiShare2,
-  FiTruck, FiShield, FiClock, FiCheck, FiMapPin, FiGift
+  FiTruck, FiShield, FiClock, FiCheck, FiMapPin, FiGift, FiAward, FiRefreshCw
 } from 'react-icons/fi'
 import { FaWhatsapp } from 'react-icons/fa'
 import ProductCard from '../components/ProductCard'
@@ -40,7 +40,7 @@ export default function ProductDetail() {
 
   // Local Pincode delivery partner estimation
   const [pincode, setPincode] = useState('110001')
-  const [deliveryInfo, setDeliveryInfo] = useState({ checked: true, city: 'Delhi NCR', eta: 'Tomorrow, by 5:00 PM', partner: 'Blue Dart Air Express ⚡' })
+  const [deliveryInfo, setDeliveryInfo] = useState({ checked: true, city: 'Delhi NCR', eta: 'Tomorrow, by 5:00 PM', partner: 'Blue Dart Air Express' })
 
   useEffect(() => {
     setLoading(true)
@@ -64,7 +64,7 @@ export default function ProductDetail() {
   const handleAddToCart = () => {
     addToCart(product, qty)
     toast.success(
-      <span>👑 <strong>{product.name}</strong> added to your bag!</span>
+      <span><strong>{product.name}</strong> added to your bag!</span>
     )
   }
 
@@ -75,11 +75,11 @@ export default function ProductDetail() {
       return
     }
     if (pincode.startsWith('11') || pincode.startsWith('20') || pincode.startsWith('12')) {
-      setDeliveryInfo({ checked: true, city: 'Delhi NCR', eta: 'Today / Tomorrow', partner: 'Same-Day Local NCR Courier 🛵' })
-      toast.success('⚡ Same-day local delivery available!')
+      setDeliveryInfo({ checked: true, city: 'Delhi NCR', eta: 'Today / Tomorrow', partner: 'Same-Day Local NCR Courier' })
+      toast.success('Same-day local delivery available!')
     } else {
-      setDeliveryInfo({ checked: true, city: 'Pan-India Express', eta: '2–3 Business Days', partner: 'Blue Dart Air Express ✈️' })
-      toast.info('✈️ Express delivery via Blue Dart Air')
+      setDeliveryInfo({ checked: true, city: 'Pan-India Express', eta: '2–3 Business Days', partner: 'Blue Dart Air Express' })
+      toast.info('Express delivery via Blue Dart Air')
     }
   }
 
@@ -104,15 +104,15 @@ export default function ProductDetail() {
         <div className="pd-image-wrap">
           <img src={product.image_url} alt={product.name} className="pd-image" />
           <div className="pd-badges-stack">
-            {discount && <span className="badge badge-sale pd-badge">🔥 {discount}% OFF</span>}
-            <span className="badge badge-gold pd-badge">👑 Royal Hallmarked</span>
+            {discount && <span className="badge badge-sale pd-badge">-{discount}%</span>}
+            <span className="badge badge-gold pd-badge">22K Finish</span>
           </div>
         </div>
 
         {/* Info */}
         {/* ── Product Info & Actions ── */}
         <div className="pd-info">
-          <span className="pd-category">👑 Handcrafted {product.category}</span>
+          <span className="pd-category">Handcrafted {product.category}</span>
           <h1 className="pd-title">{product.name}</h1>
 
           {/* Price row */}
@@ -127,15 +127,15 @@ export default function ProductDetail() {
           </div>
 
           <div className="pd-tax-badge-row">
-            <span className="tax-pill">📜 Incl. 3% Statutory GST</span>
-            <span className="tax-pill">🚚 Free Delivery on ₹999+</span>
-            <span className="tax-pill">⚡ Local Delivery Partner Ready</span>
+            <span className="tax-pill">Incl. 3% Statutory GST</span>
+            <span className="tax-pill">Free Delivery on ₹999+</span>
+            <span className="tax-pill">Local Delivery Partner Ready</span>
           </div>
 
           {/* Qty */}
           {/* Scarcity indicator */}
           <div className="pd-scarcity">
-            <span>🔥 Only <strong>3 pieces</strong> available in studio · 12 queens viewing right now</span>
+            <span>Only <strong>3 pieces</strong> available in studio · Verified high demand</span>
           </div>
 
           {/* Quantity Selector */}
@@ -152,7 +152,7 @@ export default function ProductDetail() {
           <div className="pd-ctas">
             <button className="btn btn-gold pd-cta-main" onClick={handleAddToCart}>
               <FiShoppingBag size={18} />
-              <span>Add to Bag 🛍️</span>
+              <span>Add to Bag</span>
             </button>
             <a
               href={`https://wa.me/918076428336?text=${encodeURIComponent(`Hello Miraaya Jewels! I am inquiring about "${product.name}" (₹${product.price?.toLocaleString('en-IN')}). Can you assist me with availability, styling advice, or business order?`)}`}
@@ -162,11 +162,11 @@ export default function ProductDetail() {
               title="Inquire about this piece on WhatsApp"
             >
               <FaWhatsapp size={18} />
-              <span>Inquire 💬</span>
+              <span>Inquire</span>
             </a>
             <button
               className={`pd-wishlist-btn ${wishlisted ? 'pd-wishlist-btn--active' : ''}`}
-              onClick={() => { toggle(product); toast.info(wishlisted ? 'Removed from saved pieces' : 'Saved to wishlist 💖') }}
+              onClick={() => { toggle(product); toast.info(wishlisted ? 'Removed from saved pieces' : 'Saved to wishlist') }}
               aria-label="Wishlist"
               title={wishlisted ? 'Remove from wishlist' : 'Add to wishlist'}
             >
@@ -174,7 +174,7 @@ export default function ProductDetail() {
             </button>
             <button
               className="pd-share-btn"
-              onClick={() => { navigator.clipboard?.writeText(window.location.href); toast.success('Link copied to clipboard! 📋') }}
+              onClick={() => { navigator.clipboard?.writeText(window.location.href); toast.success('Link copied to clipboard!') }}
               title="Share piece"
             >
               <FiShare2 size={18} />
@@ -189,7 +189,7 @@ export default function ProductDetail() {
                 <FiTruck size={17} style={{ color: 'var(--gold-dark)' }} />
                 <strong>Local Delivery Partner & ETA</strong>
               </div>
-              <span className="pdd-fastest">Delhi NCR Same-Day Available 🛵</span>
+              <span className="pdd-fastest">Delhi NCR Same-Day Available</span>
             </div>
 
             <form className="pdd-input-group" onSubmit={handlePincodeCheck}>
@@ -221,28 +221,28 @@ export default function ProductDetail() {
           {/* iOS Style Trust Features Pills */}
           <div className="pd-trust-grid">
             <div className="pd-trust-pill">
-              <span>💎</span>
+              <FiAward size={18} style={{ color: 'var(--gold-dark)' }} />
               <div>
                 <strong>Artisan 22K Finish</strong>
-                <span>Lead & nickel free</span>
+                <span>Lead &amp; nickel free</span>
               </div>
             </div>
             <div className="pd-trust-pill">
-              <span>🚚</span>
+              <FiTruck size={18} style={{ color: 'var(--gold-dark)' }} />
               <div>
                 <strong>Blue Dart Express</strong>
                 <span>Air transit insured</span>
               </div>
             </div>
             <div className="pd-trust-pill">
-              <span>🔄</span>
+              <FiRefreshCw size={18} style={{ color: 'var(--gold-dark)' }} />
               <div>
                 <strong>7-Day Returns</strong>
                 <span>Free doorstep pickup</span>
               </div>
             </div>
             <div className="pd-trust-pill">
-              <span>🎁</span>
+              <FiGift size={18} style={{ color: 'var(--gold-dark)' }} />
               <div>
                 <strong>Velvet Packaging</strong>
                 <span>Royal gift ready</span>
@@ -258,7 +258,7 @@ export default function ProductDetail() {
                 className={`pd-tab ${activeTab === tab ? 'pd-tab--active' : ''}`}
                 onClick={() => setActiveTab(tab)}
               >
-                {tab === 'description' ? '✨ Craftsmanship & Story' : '📋 Product Specifications'}
+                {tab === 'description' ? 'Craftsmanship & Story' : 'Product Specifications'}
               </button>
             ))}
           </div>
@@ -290,7 +290,7 @@ export default function ProductDetail() {
       {related.length > 0 && (
         <section className="pd-related container">
           <p className="section-subtitle" style={{ textAlign: 'left', marginBottom: '4px' }}>
-            👑 Complementary Heirlooms
+            Complementary Heirlooms
           </p>
           <h2 className="section-title" style={{ textAlign: 'left', marginBottom: 8 }}>
             Complete the Royal Look

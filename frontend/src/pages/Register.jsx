@@ -26,7 +26,7 @@ export default function Register() {
     setLoading(true)
     try {
       await register(form.name, form.email, form.password)
-      toast.success('🎉 Welcome to Miraaya Jewels VIP Club! Your 10% coupon is MIRAAYA10')
+      toast.success('Welcome to Miraaya Jewels VIP Club! Your 10% coupon is MIRAAYA10')
       navigate('/')
     } catch (err) {
       toast.error(err.response?.data?.message || 'Registration failed. Please try again.')
@@ -44,14 +44,16 @@ export default function Register() {
       <div className="auth-card ios-card">
         {/* iOS Segmented Pill Switcher */}
         <div className="ios-segmented-control">
-          <Link to="/login" className="ios-segment-btn">Sign In 🔑</Link>
-          <button className="ios-segment-btn ios-segment-btn--active">Create Account ✨</button>
+          <Link to="/login" className="ios-segment-btn">Sign In</Link>
+          <button className="ios-segment-btn ios-segment-btn--active">Create Account</button>
         </div>
 
         <div className="auth-brand">
-          <div className="auth-brand__crown">👑</div>
+          <div className="auth-brand__crown">
+            <FiShield size={24} style={{ color: 'var(--gold-dark)' }} />
+          </div>
           <span className="auth-brand__name">Miraaya Jewels</span>
-          <span className="auth-brand__tag">Unlock Royalty & Exclusive Pricing</span>
+          <span className="auth-brand__tag">Unlock Royalty &amp; Exclusive Pricing</span>
         </div>
 
         <h1 className="auth-title">Join Miraaya Club</h1>
@@ -64,7 +66,6 @@ export default function Register() {
             className="social-auth-btn social-auth-btn--apple"
             onClick={() => handleSocialRegister('Apple ID')}
           >
-            <span className="social-icon">🍏</span>
             <span>Sign up with Apple</span>
           </button>
           <button
@@ -72,7 +73,6 @@ export default function Register() {
             className="social-auth-btn social-auth-btn--google"
             onClick={() => handleSocialRegister('Google')}
           >
-            <span className="social-icon">🌐</span>
             <span>Sign up with Google</span>
           </button>
         </div>
@@ -164,13 +164,13 @@ export default function Register() {
           </label>
 
           <button type="submit" className="btn btn-gold auth-submit" disabled={loading}>
-            <span>{loading ? 'Creating VIP Profile… 👑' : 'Join Miraaya VIP Club ✨'}</span>
+            <span>{loading ? 'Creating VIP Profile…' : 'Join Miraaya VIP Club'}</span>
             {!loading && <FiArrowRight size={16} />}
           </button>
         </form>
 
         <p className="auth-switch">
-          Already a member? <Link to="/login">Sign In Here 🔑</Link>
+          Already a member? <Link to="/login">Sign In Here</Link>
         </p>
       </div>
     </div>

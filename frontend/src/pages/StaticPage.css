@@ -135,7 +135,8 @@
   transition: all var(--transition-fast);
 }
 
-.form-input:focus, .form-textarea:focus {
+.form-input:focus,
+.form-textarea:focus {
   border-color: var(--gold);
   background: #fff;
   box-shadow: 0 0 0 4px var(--gold-glow);
@@ -433,8 +434,15 @@
 }
 
 @keyframes iosExpand {
-  from { opacity: 0; transform: translateY(-6px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .ios-faq-empty {
@@ -557,13 +565,16 @@
     text-align: center;
     padding: 32px 24px;
   }
+
   .ios-support-sub {
     max-width: 100%;
   }
+
   .ios-support-card__actions {
     width: 100%;
     align-items: center;
   }
+
   .ios-support-btn {
     width: 100%;
     max-width: 320px;
@@ -576,15 +587,19 @@
     align-items: flex-start;
     gap: 8px;
   }
+
   .ios-faq-row__question {
     padding: 18px 20px;
   }
+
   .ios-faq-row__answer {
     padding: 0 20px 20px 20px;
   }
+
   .ios-faq-card__header {
     padding: 16px 20px;
   }
+
   .contact-form {
     padding: 24px 18px;
   }

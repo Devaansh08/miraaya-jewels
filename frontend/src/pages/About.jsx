@@ -24,10 +24,10 @@ export default function About() {
           <div className="divider" style={{ margin: '12px 0 24px' }} />
           <div className="about-values">
             {[
-              ['✨ Craftsmanship', 'Every piece is handpicked for quality, detail, and longevity.'],
-              ['💫 Authenticity', 'Traditional Indian techniques meet modern aesthetics.'],
-              ['🌱 Responsibility', 'We source ethically and package sustainably.'],
-              ['❤️ Community', 'Built on trust with our customers, one piece at a time.']
+              ['Craftsmanship', 'Every piece is handpicked for quality, detail, and longevity.'],
+              ['Authenticity', 'Traditional Indian techniques meet modern aesthetics.'],
+              ['Responsibility', 'We source ethically and package sustainably.'],
+              ['Community', 'Built on trust with our customers, one piece at a time.']
             ].map(([t, d]) => (
               <div className="about-value-card" key={t}>
                 <h3>{t}</h3>

@@ -17,30 +17,38 @@ export default function Footer() {
         <div className="container">
           <div className="footer__trust-grid">
             <div className="footer__trust-pill">
-              <span className="footer__trust-emoji">⚡</span>
+              <div className="footer__trust-icon-wrap">
+                <FiTruck size={20} />
+              </div>
               <div className="footer__trust-text">
-                <strong>Blue Dart Air & Local NCR 🛵</strong>
+                <strong>Blue Dart Air &amp; Local NCR</strong>
                 <span>Priority express delivery with live tracking</span>
               </div>
             </div>
             <div className="footer__trust-pill">
-              <span className="footer__trust-emoji">💎</span>
+              <div className="footer__trust-icon-wrap">
+                <FiAward size={20} />
+              </div>
               <div className="footer__trust-text">
-                <strong>100% Certified 22K Finish 👑</strong>
-                <span>Lead-free & hypoallergenic craftsmanship</span>
+                <strong>100% Certified 22K Finish</strong>
+                <span>Lead-free &amp; hypoallergenic craftsmanship</span>
               </div>
             </div>
             <div className="footer__trust-pill">
-              <span className="footer__trust-emoji">🔄</span>
+              <div className="footer__trust-icon-wrap">
+                <FiRefreshCw size={20} />
+              </div>
               <div className="footer__trust-text">
-                <strong>7-Day Free Pickup Returns 📦</strong>
-                <span>Instant refund & hassle-free exchange</span>
+                <strong>7-Day Free Pickup Returns</strong>
+                <span>Instant refund &amp; hassle-free exchange</span>
               </div>
             </div>
             <div className="footer__trust-pill">
-              <span className="footer__trust-emoji">📜</span>
+              <div className="footer__trust-icon-wrap">
+                <FiShield size={20} />
+              </div>
               <div className="footer__trust-text">
-                <strong>3% GST Transparent Billing 💳</strong>
+                <strong>3% GST Transparent Billing</strong>
                 <span>No hidden costs · Itemized digital invoice</span>
               </div>
             </div>
@@ -58,7 +66,7 @@ export default function Footer() {
                 <span className="footer__logo-sub">JEWELS</span>
               </div>
               <p className="footer__tagline">
-                Thoughtfully selected fashion jewellery for every chapter of you ✨
+                Thoughtfully selected fashion jewellery for every chapter of you.
                 Handcrafted with royal heritage traditions, modern elegance, and transparent care.
               </p>
               <div className="footer__social">
@@ -74,48 +82,48 @@ export default function Footer() {
               </div>
 
               <div className="footer__badge-list">
-                <span className="f-badge">👑 Handcrafted in India</span>
-                <span className="f-badge">✨ 10,000+ Happy Queens</span>
+                <span className="f-badge">Handcrafted in India</span>
+                <span className="f-badge">10,000+ Happy Queens</span>
               </div>
             </div>
 
-            {/* Categories (with icons/emojis in footer as requested) */}
+            {/* Categories */}
             <div className="footer__col">
               <h4 className="footer__heading">
-                <span>🛍️</span> Shop Categories
+                Shop Categories
               </h4>
               <ul className="footer__links">
-                <li><Link to="/shop">✨ Shop All Jewellery</Link></li>
-                <li><Link to="/shop?category=Necklaces">📿 Necklaces & Sets</Link></li>
-                <li><Link to="/shop?category=Rings">💍 Cocktail & Band Rings</Link></li>
-                <li><Link to="/shop?category=Bangles">✨ Royal Kundan Bangles</Link></li>
-                <li><Link to="/shop?category=Earrings">💎 Jhumkas & Chandbalis</Link></li>
-                <li><Link to="/shop?category=Hair Accessories">👑 Bridal Passa & Tikkas</Link></li>
-                <li><Link to="/shop?category=Watches">⌚ Jewelled Cuff Watches</Link></li>
+                <li><Link to="/shop">Shop All Jewellery</Link></li>
+                <li><Link to="/shop?category=Necklaces">Necklaces &amp; Sets</Link></li>
+                <li><Link to="/shop?category=Rings">Cocktail &amp; Band Rings</Link></li>
+                <li><Link to="/shop?category=Bangles">Royal Kundan Bangles</Link></li>
+                <li><Link to="/shop?category=Earrings">Jhumkas &amp; Chandbalis</Link></li>
+                <li><Link to="/shop?category=Hair Accessories">Bridal Passa &amp; Tikkas</Link></li>
+                <li><Link to="/shop?category=Watches">Jewelled Cuff Watches</Link></li>
               </ul>
             </div>
 
             {/* Quick Links */}
             <div className="footer__col">
               <h4 className="footer__heading">
-                <span>📋</span> Quick & Helpful Links
+                Quick &amp; Helpful Links
               </h4>
               <ul className="footer__links">
-                <li><Link to="/about">📖 Our Story & Legacy</Link></li>
-                <li><Link to="/track-order">📦 Track Your Order</Link></li>
-                <li><Link to="/cancel-order">🚫 Cancel Order Request</Link></li>
-                <li><Link to="/faq">💬 Help & FAQ Guide</Link></li>
-                <li><Link to="/shipping-policy">🚚 Shipping & Delivery Rates</Link></li>
-                <li><Link to="/returns">🔄 7-Day Returns & Exchanges</Link></li>
-                <li><Link to="/privacy-policy">🔒 Privacy & Data Policy</Link></li>
-                <li><Link to="/terms">📜 Terms & Conditions</Link></li>
+                <li><Link to="/about">Our Story &amp; Legacy</Link></li>
+                <li><Link to="/track-order">Track Your Order</Link></li>
+                <li><Link to="/cancel-order">Cancel Order Request</Link></li>
+                <li><Link to="/faq">Help &amp; FAQ Guide</Link></li>
+                <li><Link to="/shipping-policy">Shipping &amp; Delivery Rates</Link></li>
+                <li><Link to="/returns">7-Day Returns &amp; Exchanges</Link></li>
+                <li><Link to="/privacy-policy">Privacy &amp; Data Policy</Link></li>
+                <li><Link to="/terms">Terms &amp; Conditions</Link></li>
               </ul>
             </div>
 
             {/* Contact & Local Studio */}
             <div className="footer__col">
               <h4 className="footer__heading">
-                <span>📞</span> Concierge & Studio
+                Concierge &amp; Studio
               </h4>
               <ul className="footer__contact">
                 <li>
@@ -139,7 +147,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <FiMapPin size={15} style={{ color: 'var(--gold)' }} />
-                  <span>Delhi NCR Studio, India 🇮🇳</span>
+                  <span>Delhi NCR Studio, India</span>
                 </li>
                 <li>
                   <FiClock size={15} style={{ color: 'var(--gold)' }} />
@@ -166,12 +174,12 @@ export default function Footer() {
             </p>
 
             <div className="footer__payment-partners">
-              <span className="f-pay-tag">📱 UPI / GPay</span>
-              <span className="f-pay-tag">🟣 PhonePe</span>
-              <span className="f-pay-tag">💳 Cards (Visa/MC)</span>
-              <span className="f-pay-tag">⚡ Blue Dart</span>
-              <span className="f-pay-tag">🚚 Delhivery</span>
-              <span className="f-pay-tag">🔒 256-Bit SSL</span>
+              <span className="f-pay-tag">UPI / GPay</span>
+              <span className="f-pay-tag">PhonePe</span>
+              <span className="f-pay-tag">Visa / Mastercard</span>
+              <span className="f-pay-tag">Blue Dart Air</span>
+              <span className="f-pay-tag">Delhivery</span>
+              <span className="f-pay-tag">256-Bit SSL</span>
             </div>
           </div>
         </div>

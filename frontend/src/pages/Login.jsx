@@ -17,7 +17,7 @@ export default function Login() {
     setLoading(true)
     try {
       await login(form.email, form.password)
-      toast.success('👑 Welcome back to Miraaya Jewels!')
+      toast.success('Welcome back to Miraaya Jewels!')
       navigate('/')
     } catch (err) {
       toast.error(err.response?.data?.message || 'Invalid email or password. Please try again.')
@@ -35,14 +35,16 @@ export default function Login() {
       <div className="auth-card ios-card">
         {/* iOS Segmented Pill Switcher */}
         <div className="ios-segmented-control">
-          <button className="ios-segment-btn ios-segment-btn--active">Sign In 🔑</button>
-          <Link to="/register" className="ios-segment-btn">Create Account ✨</Link>
+          <button className="ios-segment-btn ios-segment-btn--active">Sign In</button>
+          <Link to="/register" className="ios-segment-btn">Create Account</Link>
         </div>
 
         <div className="auth-brand">
-          <div className="auth-brand__crown">👑</div>
+          <div className="auth-brand__crown">
+            <FiShield size={24} style={{ color: 'var(--gold-dark)' }} />
+          </div>
           <span className="auth-brand__name">Miraaya Jewels</span>
-          <span className="auth-brand__tag">Royal Club & Order Concierge</span>
+          <span className="auth-brand__tag">Royal Club &amp; Order Concierge</span>
         </div>
 
         <h1 className="auth-title">Welcome Back</h1>
@@ -55,7 +57,6 @@ export default function Login() {
             className="social-auth-btn social-auth-btn--apple"
             onClick={() => handleSocialLogin('Apple ID')}
           >
-            <span className="social-icon">🍏</span>
             <span>Continue with Apple</span>
           </button>
           <button
@@ -63,7 +64,6 @@ export default function Login() {
             className="social-auth-btn social-auth-btn--google"
             onClick={() => handleSocialLogin('Google')}
           >
-            <span className="social-icon">🌐</span>
             <span>Continue with Google</span>
           </button>
         </div>
@@ -129,7 +129,7 @@ export default function Login() {
           </div>
 
           <button type="submit" className="btn btn-gold auth-submit" disabled={loading}>
-            <span>{loading ? 'Verifying Account… ⏳' : 'Sign In to Bag & Orders 🛍️'}</span>
+            <span>{loading ? 'Verifying Account…' : 'Sign In to Bag & Orders'}</span>
             {!loading && <FiArrowRight size={16} />}
           </button>
         </form>
@@ -137,18 +137,18 @@ export default function Login() {
         {/* Member Benefits Footer */}
         <div className="auth-benefits">
           <div className="auth-benefit-item">
-            <span>⚡ Same-Day NCR Tracking</span>
+            <span>Same-Day NCR Tracking</span>
           </div>
           <div className="auth-benefit-item">
-            <span>🎁 10% Off First Purchase</span>
+            <span>10% Off First Purchase</span>
           </div>
           <div className="auth-benefit-item">
-            <span>👑 Exclusive VIP Drops</span>
+            <span>Exclusive VIP Drops</span>
           </div>
         </div>
 
         <p className="auth-switch">
-          New to Miraaya? <Link to="/register">Create VIP Account ✨</Link>
+          New to Miraaya? <Link to="/register">Create VIP Account</Link>
         </p>
       </div>
     </div>

@@ -39,9 +39,15 @@
   transform: translateY(-2px);
 }
 
-.footer__trust-emoji {
-  font-size: 1.6rem;
-  line-height: 1;
+.footer__trust-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(219, 167, 85, 0.12);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
 

@@ -28,14 +28,14 @@ export default function ProductCard({ product }) {
     e.preventDefault()
     addToCart(product)
     toast.success(
-      <span>👑 <strong>{product.name}</strong> added to bag!</span>
+      <span><strong>{product.name}</strong> added to bag</span>
     )
   }
 
   const handleWishlist = (e) => {
     e.preventDefault()
     toggle(product)
-    toast.info(wishlisted ? 'Removed from saved pieces' : 'Saved to wishlist 💖')
+    toast.info(wishlisted ? 'Removed from saved pieces' : 'Saved to wishlist')
   }
 
   const imgSrc = imgError
@@ -55,48 +55,33 @@ export default function ProductCard({ product }) {
           />
         </Link>
 
+        {/* Minimal Sale Badge (Top-Left) */}
         {discountPct && (
-          <span className="product-card__badge badge badge-sale">🔥 {discountPct}% OFF</span>
+          <span className="product-card__badge">-{discountPct}%</span>
         )}
 
-        <div className="product-card__hallmark-tag">
-          <span>💎 22K Finish</span>
-        </div>
+        {/* Minimal Wishlist Heart (Top-Right) */}
+        <button
+          className={`product-card__wishlist-btn ${wishlisted ? 'product-card__wishlist-btn--active' : ''}`}
+          onClick={handleWishlist}
+          aria-label={wishlisted ? 'Remove from wishlist' : 'Add to wishlist'}
+          title={wishlisted ? 'Saved' : 'Save to Wishlist'}
+          type="button"
+        >
+          <FiHeart size={15} fill={wishlisted ? 'currentColor' : 'none'} />
+        </button>
 
-        <div className="product-card__actions">
-          <button
-            className={`product-card__action-btn ${wishlisted ? 'product-card__action-btn--active' : ''}`}
-            onClick={handleWishlist}
-            aria-label={wishlisted ? 'Remove from wishlist' : 'Add to wishlist'}
-            title={wishlisted ? 'Saved' : 'Save to Wishlist'}
-            type="button"
-          >
-            <FiHeart size={16} fill={wishlisted ? 'currentColor' : 'none'} />
-          </button>
-          <Link
-            to={`/product/${product.slug}`}
-            className="product-card__action-btn"
-            aria-label="Quick view"
-            title="View Details"
-          >
-            <FiEye size={16} />
-          </Link>
-        </div>
-
+        {/* Add to Bag Button */}
         <button className="product-card__cart-btn" onClick={handleAddToCart} type="button">
-          <FiShoppingBag size={15} />
-          <span>Add to Bag 🛍️</span>
+          <FiShoppingBag size={14} />
+          <span>Add to Bag</span>
         </button>
       </div>
 
       <div className="product-card__info">
         <div className="product-card__meta-row">
-          <span className="product-card__cat">👑 {product.category}</span>
-          <div className="product-card__rating">
-            <span className="star-icon">★</span>
-            <span className="rating-score">{rating}</span>
-            <span className="rating-count">({reviewCount})</span>
-          </div>
+          <span className="product-card__cat">{product.category}</span>
+          <span className="product-card__hallmark-pill">22K Finish</span>
         </div>
 
         <Link to={`/product/${product.slug}`} className="product-card__name">
@@ -110,9 +95,11 @@ export default function ProductCard({ product }) {
               <span className="product-card__price-mrp">₹{product.mrp?.toLocaleString('en-IN')}</span>
             )}
           </div>
-          {savings && (
-            <span className="product-card__savings-tag">Save ₹{savings.toLocaleString('en-IN')}</span>
-          )}
+          <div className="product-card__rating">
+            <span className="star-icon">★</span>
+            <span className="rating-score">{rating}</span>
+            <span className="rating-count">({reviewCount})</span>
+          </div>
         </div>
       </div>
     </div>

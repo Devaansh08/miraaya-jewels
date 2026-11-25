@@ -74,7 +74,7 @@ export default function WhatsAppButton() {
 
           <div className="whatsapp-popup__body">
             <p className="whatsapp-popup__greeting">
-              Namaste! 🙏 Welcome to Miraaya Jewels. How can our royal jewellery stylists assist you today?
+              Namaste! Welcome to Miraaya Jewels. How can our royal jewellery stylists assist you today?
             </p>
 
             <div className="whatsapp-popup__options">
@@ -88,7 +88,7 @@ export default function WhatsAppButton() {
                   <FiHelpCircle size={18} />
                 </div>
                 <div className="whatsapp-opt-text">
-                  <strong>Jewellery Inquiry &amp; Styling 💬</strong>
+                  <strong>Jewellery Inquiry &amp; Styling</strong>
                   <span>Sizing, custom bridal sets, express delivery</span>
                 </div>
                 <FiChevronRight className="whatsapp-opt-arrow" size={16} />
@@ -104,7 +104,7 @@ export default function WhatsAppButton() {
                   <FiBriefcase size={18} />
                 </div>
                 <div className="whatsapp-opt-text">
-                  <strong>Business &amp; Bulk Orders 💼</strong>
+                  <strong>Business &amp; Bulk Orders</strong>
                   <span>Wholesale catalog, corporate &amp; boutique orders</span>
                 </div>
                 <FiChevronRight className="whatsapp-opt-arrow" size={16} />

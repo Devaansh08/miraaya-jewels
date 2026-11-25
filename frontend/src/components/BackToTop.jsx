@@ -28,8 +28,8 @@ export default function BackToTop() {
       aria-label="Scroll back to top"
       title="Back to Top"
     >
-      <FiArrowUp size={18} />
-      <span>Top ✨</span>
+      <FiArrowUp size={17} />
+      <span>Top</span>
     </button>
   )
 }

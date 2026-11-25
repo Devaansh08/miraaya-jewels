@@ -56,9 +56,11 @@
 }
 
 html {
-  scroll-behavior: smooth !important;
+  scroll-behavior: smooth;
+  scroll-padding-top: 76px;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -72,6 +74,7 @@ body {
   text-rendering: optimizeLegibility;
   margin: 0;
   padding: 0;
+  -webkit-overflow-scrolling: touch;
 }
 
 #root {
@@ -110,7 +113,7 @@ body {
 
 @media (max-width: 1200px) {
   #root {
-    padding: 16px 18px 24px;
+    padding: 16px 20px 24px;
   }
 
   .page-wrap {
@@ -129,23 +132,33 @@ body {
 
 @media (max-width: 768px) {
   #root {
-    padding: 10px 10px 18px;
-    background-color: #ede4d8;
+    padding: 0;
+    background-color: var(--ivory);
   }
 
   .page-wrap {
-    border-radius: 18px;
-    border-color: rgba(219, 167, 85, 0.22);
-    box-shadow: 0 10px 32px rgba(17, 16, 15, 0.09);
-    min-height: calc(100vh - 28px);
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    min-height: 100vh;
+    overflow: visible;
   }
 
   .topbar {
-    border-radius: 16px 16px 0 0;
+    border-radius: 0;
   }
 
   .footer {
-    border-radius: 0 0 16px 16px;
+    border-radius: 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .section-subtitle {
+    margin-bottom: 28px;
+    font-size: 0.75rem;
   }
 }
 
@@ -330,14 +343,14 @@ h5 {
 /* ── Smooth Floating Back to Top Button ── */
 .back-to-top-btn {
   position: fixed;
-  bottom: 28px;
-  right: max(24px, calc((100vw - 1400px) / 2 + 28px));
-  z-index: 1050;
+  bottom: 24px;
+  right: max(24px, calc((100vw - 1400px) / 2 + 24px));
+  z-index: 1030;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 10px 18px;
-  background: rgba(17, 16, 15, 0.88);
+  padding: 10px 16px;
+  background: rgba(17, 16, 15, 0.9);
   color: #fff;
   border-radius: var(--radius-full);
   border: 1px solid rgba(219, 167, 85, 0.4);
@@ -346,10 +359,25 @@ h5 {
   -webkit-backdrop-filter: blur(12px);
   font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
   cursor: pointer;
   transition: all var(--transition-bounce);
   animation: floatUp 0.3s ease;
+}
+
+@media (max-width: 640px) {
+  .back-to-top-btn {
+    bottom: 20px;
+    right: 16px;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .back-to-top-btn span {
+    display: none !important;
+  }
 }
 
 .back-to-top-btn:hover {

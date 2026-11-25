@@ -307,21 +307,26 @@
 @media (max-width: 640px) {
   .whatsapp-widget {
     bottom: 20px;
-    left: 14px;
+    left: 16px;
+    z-index: 1030;
   }
 
   .whatsapp-float-btn {
-    padding: 10px 14px;
-    gap: 7px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
   }
 
   .whatsapp-float-label {
-    font-size: 0.75rem;
+    display: none !important;
   }
 
   .whatsapp-popup {
-    width: calc(100vw - 28px);
+    width: calc(100vw - 32px);
     max-width: 320px;
     left: 0;
+    bottom: calc(100% + 12px);
   }
 }

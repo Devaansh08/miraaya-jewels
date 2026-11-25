@@ -24,33 +24,33 @@ const NEW_ARRIVALS = [
 ]
 
 const CATEGORIES = [
-  { name: 'Necklaces', slug: 'Necklaces', icon: '📿', tag: 'Royal Sets', img: '/images/categories/cat-necklaces.jpg' },
-  { name: 'Rings', slug: 'Rings', icon: '💍', tag: 'Statement', img: '/images/categories/cat-rings.jpg' },
-  { name: 'Bangles', slug: 'Bangles', icon: '✨', tag: 'Kundan Pairs', img: '/images/categories/cat-bangles.jpg' },
-  { name: 'Earrings', slug: 'Earrings', icon: '💎', tag: 'Jhumkas', img: '/images/categories/cat-earrings.jpg' },
-  { name: 'Hair Ornaments', slug: 'Hair Accessories', icon: '👑', tag: 'Bridal Passa', img: '/images/categories/cat-hair.jpg' },
-  { name: 'Cuff Watches', slug: 'Watches', icon: '⌚', tag: 'Jewelled', img: '/images/categories/cat-watches.jpg' },
+  { name: 'Necklaces', slug: 'Necklaces', tag: 'Royal Sets', img: '/images/categories/cat-necklaces.jpg' },
+  { name: 'Rings', slug: 'Rings', tag: 'Statement', img: '/images/categories/cat-rings.jpg' },
+  { name: 'Bangles', slug: 'Bangles', tag: 'Kundan Pairs', img: '/images/categories/cat-bangles.jpg' },
+  { name: 'Earrings', slug: 'Earrings', tag: 'Jhumkas', img: '/images/categories/cat-earrings.jpg' },
+  { name: 'Hair Ornaments', slug: 'Hair Accessories', tag: 'Bridal Passa', img: '/images/categories/cat-hair.jpg' },
+  { name: 'Cuff Watches', slug: 'Watches', tag: 'Jewelled', img: '/images/categories/cat-watches.jpg' },
 ]
 
 const OCCASIONS = [
-  { label: 'Royal Bridal Edit 👰', desc: 'Regal Polki & Kundan sets handcrafted for life\'s grandest chapter', img: '/images/products/necklace-set.jpg' },
-  { label: 'Everyday Glow ✨', desc: 'Feather-light, anti-tarnish elegance for work and effortless evenings', img: '/images/products/jhumka-earrings.jpg' },
-  { label: 'Festive & Sangeet 💃', desc: 'Dazzling statement pieces designed to captivate under chandeliers', img: '/images/products/peacock-necklace.jpg' },
-  { label: 'Luxury Gifting 🎁', desc: 'Signature velvet gift packaging with handwritten wax-seal cards', img: '/images/products/cocktail-ring.jpg' },
+  { label: 'Royal Bridal Edit', desc: 'Regal Polki & Kundan sets handcrafted for life\'s grandest chapter', img: '/images/products/necklace-set.jpg' },
+  { label: 'Everyday Glow', desc: 'Feather-light, anti-tarnish elegance for work and effortless evenings', img: '/images/products/jhumka-earrings.jpg' },
+  { label: 'Festive & Sangeet', desc: 'Dazzling statement pieces designed to captivate under chandeliers', img: '/images/products/peacock-necklace.jpg' },
+  { label: 'Luxury Gifting', desc: 'Signature velvet gift packaging with handwritten wax-seal cards', img: '/images/products/cocktail-ring.jpg' },
 ]
 
 const REVIEWS = [
-  { name: 'Priya Sharma (Delhi)', rating: 5, badge: 'Verified Buyer ✅', text: 'Ordered the Rani Kundan Bangle Pair through local same-day delivery in Delhi NCR. Received within 4 hours in pristine luxury packaging! The stones sparkle like real diamonds.' },
-  { name: 'Ananya Roy (Mumbai)', rating: 5, badge: 'Verified Buyer ✅', text: 'The Triple Layer Kundan set stole the entire spotlight at my reception! Sturdy weight, authentic 22K gold look without irritating sensitive skin. Absolutely in love.' },
-  { name: 'Meenakshi Iyer (Bengaluru)', rating: 5, badge: 'Verified Buyer ✅', text: 'The peacock arch jhumkas are pure poetry! Delivered via Blue Dart Air in 2 days. The craftsmanship surpasses designer labels that cost 10x more.' },
-  { name: 'Dr. Radhika K. (Chandigarh)', rating: 5, badge: 'Verified Buyer ✅', text: 'From transparent billing to instant WhatsApp delivery updates, Miraaya Jewels sets the gold standard in online luxury jewellery shopping. 10/10!' },
+  { name: 'Priya Sharma (Delhi)', rating: 5, badge: 'Verified Buyer', text: 'Ordered the Rani Kundan Bangle Pair through local same-day delivery in Delhi NCR. Received within 4 hours in pristine luxury packaging! The stones sparkle like real diamonds.' },
+  { name: 'Ananya Roy (Mumbai)', rating: 5, badge: 'Verified Buyer', text: 'The Triple Layer Kundan set stole the entire spotlight at my reception! Sturdy weight, authentic 22K gold look without irritating sensitive skin. Absolutely in love.' },
+  { name: 'Meenakshi Iyer (Bengaluru)', rating: 5, badge: 'Verified Buyer', text: 'The peacock arch jhumkas are pure poetry! Delivered via Blue Dart Air in 2 days. The craftsmanship surpasses designer labels that cost 10x more.' },
+  { name: 'Dr. Radhika K. (Chandigarh)', rating: 5, badge: 'Verified Buyer', text: 'From transparent billing to instant WhatsApp delivery updates, Miraaya Jewels sets the gold standard in online luxury jewellery shopping. 10/10!' },
 ]
 
 const PARTNERS = [
-  { name: 'Blue Dart ⚡', role: 'Air Express Partner', desc: '1-2 Days Metro Delivery' },
-  { name: 'Delhivery 🚚', role: 'Pan-India Surface', desc: '19,000+ Pin Codes Covered' },
-  { name: 'Shiprocket 🛵', role: 'Local NCR Courier', desc: 'Same-Day 4-Hour Delivery' },
-  { name: 'Razorpay 🔒', role: 'PCI-DSS Level 1', desc: '256-Bit SSL Encrypted' },
+  { name: 'Blue Dart Air', role: 'Air Express Partner', desc: '1-2 Days Metro Delivery' },
+  { name: 'Delhivery', role: 'Pan-India Surface', desc: '19,000+ Pin Codes Covered' },
+  { name: 'Shiprocket Express', role: 'Local NCR Courier', desc: 'Same-Day 4-Hour Delivery' },
+  { name: 'Razorpay Secure', role: 'PCI-DSS Level 1', desc: '256-Bit SSL Encrypted' },
 ]
 
 const FAQS_PREVIEW = [
@@ -96,10 +96,10 @@ export default function Home() {
     e.preventDefault()
     try {
       await axios.post('/api/newsletter', { email })
-      toast.success('🎉 Welcome to Miraaya VIP Club! Your 10% coupon code is MIRAAYA10')
+      toast.success('Welcome to Miraaya VIP Club! Your 10% coupon code is MIRAAYA10')
       setEmail('')
     } catch {
-      toast.success('🎉 Welcome to Miraaya VIP Club! Your 10% coupon code is MIRAAYA10')
+      toast.success('Welcome to Miraaya VIP Club! Your 10% coupon code is MIRAAYA10')
       setEmail('')
     }
   }
@@ -128,7 +128,7 @@ export default function Home() {
           <div className="hero__content">
             <div className="hero__badge-wrap">
               <span className="badge badge-gold">
-                👑 ROYAL HERITAGE COLLECTION · FESTIVE 2025
+                ROYAL HERITAGE COLLECTION · FESTIVE 2025
               </span>
             </div>
             <h1 className="hero__title">
@@ -136,23 +136,24 @@ export default function Home() {
               <span className="hero__title-script">Elegance</span>
             </h1>
             <p className="hero__sub">
-              Adorning life's golden moments ✨ Handcrafted royal Indian necklaces,
+              Adorning life's golden moments. Handcrafted royal Indian necklaces,
               bridal Polki chokers, and heirlooms, thoughtfully curated for the modern queen.
             </p>
             <div className="hero__actions">
               <Link to="/shop" className="btn btn-gold">
-                <span>Explore Collection 🛍️</span>
+                <span>Explore Collection</span>
+                <FiArrowRight size={15} />
               </Link>
               <Link to="/shop?category=Necklaces" className="btn btn-outline hero__btn-outline">
-                <span>Bridal Edit 👰</span>
+                <span>Bridal Edit</span>
               </Link>
             </div>
             <div className="hero__features-row">
-              <span>⚡ Same-Day NCR Delivery</span>
+              <span>Same-Day NCR Delivery</span>
               <span>·</span>
-              <span>💎 100% Certified Quality</span>
+              <span>100% Certified Quality</span>
               <span>·</span>
-              <span>📦 Free Pan-India Shipping</span>
+              <span>Free Pan-India Shipping</span>
             </div>
           </div>
 
@@ -187,11 +188,12 @@ export default function Home() {
                   </button>
                 </div>
                 <div className="hero__showcase-footer">
-                  <span className="hero__showcase-pill-tag">✨ Model in Crimson Silk Saree · Neckpiece Detail</span>
+                  <span className="hero__showcase-pill-tag">Crimson Silk Saree · Neckpiece Detail</span>
                   <span className="hero__showcase-title">Triple Layer Kundan Necklace Set</span>
-                  <span className="hero__showcase-desc">💎 100% Certified 22K Gold Finish · Handcrafted Heirlooms</span>
+                  <span className="hero__showcase-desc">100% Certified 22K Gold Finish · Handcrafted Heirlooms</span>
                   <Link to="/product/triple-layer-kundan-necklace-set" className="hero__showcase-shop-btn">
-                    <span>Explore This Necklace 🛍️</span>
+                    <span>Explore This Necklace</span>
+                    <FiArrowRight size={13} />
                   </Link>
                 </div>
               </div>
@@ -200,7 +202,7 @@ export default function Home() {
         </div>
 
         <div className="hero__scroll-hint">
-          <span>Scroll Down ✨</span>
+          <span>Scroll Down</span>
           <div className="hero__scroll-line" />
         </div>
       </section>
@@ -209,31 +211,39 @@ export default function Home() {
       <div className="trust-bar">
         <div className="container trust-bar__inner">
           <div className="trust-bar__item">
-            <div className="trust-bar__icon-wrap">🚚</div>
+            <div className="trust-bar__icon-wrap">
+              <FiTruck size={20} />
+            </div>
             <div>
-              <div className="trust-bar__title">Local Express Delivery ⚡</div>
-              <div className="trust-bar__desc">Same-Day NCR & Blue Dart Air nationwide</div>
+              <div className="trust-bar__title">Local Express Delivery</div>
+              <div className="trust-bar__desc">Same-Day NCR &amp; Blue Dart Air nationwide</div>
             </div>
           </div>
           <div className="trust-bar__item">
-            <div className="trust-bar__icon-wrap">🏷️</div>
+            <div className="trust-bar__icon-wrap">
+              <FiShield size={20} />
+            </div>
             <div>
-              <div className="trust-bar__title">Transparent Billing 💳</div>
+              <div className="trust-bar__title">Transparent Billing</div>
               <div className="trust-bar__desc">Exact 3% GST breakdown · No hidden costs</div>
             </div>
           </div>
           <div className="trust-bar__item">
-            <div className="trust-bar__icon-wrap">👑</div>
+            <div className="trust-bar__icon-wrap">
+              <FiAward size={20} />
+            </div>
             <div>
-              <div className="trust-bar__title">Artisan Craftsmanship 💎</div>
+              <div className="trust-bar__title">Artisan Craftsmanship</div>
               <div className="trust-bar__desc">Certified 22K finish, hypoallergenic stones</div>
             </div>
           </div>
           <div className="trust-bar__item">
-            <div className="trust-bar__icon-wrap">🔄</div>
+            <div className="trust-bar__icon-wrap">
+              <FiRefreshCw size={20} />
+            </div>
             <div>
-              <div className="trust-bar__title">7-Day Free Pickup Returns 📦</div>
-              <div className="trust-bar__desc">Instant refund & hassle-free exchange</div>
+              <div className="trust-bar__title">7-Day Free Pickup Returns</div>
+              <div className="trust-bar__desc">Instant refund &amp; hassle-free exchange</div>
             </div>
           </div>
         </div>
@@ -243,7 +253,7 @@ export default function Home() {
       <section className="section section--ivory" id="category">
         <div className="container">
           <p className="section-subtitle">
-            <span>✨</span> Curated Categories <span>✨</span>
+            Curated Categories
           </p>
           <h2 className="section-title">Shop by Category</h2>
           <div className="divider" />
@@ -259,7 +269,6 @@ export default function Home() {
                   <span className="category-card__tag">{cat.tag}</span>
                 </div>
                 <div className="category-card__label-wrap">
-                  <span className="category-card__icon">{cat.icon}</span>
                   <span className="category-card__label">{cat.name}</span>
                 </div>
               </Link>
@@ -272,7 +281,7 @@ export default function Home() {
       <section className="section section--cream">
         <div className="container">
           <p className="section-subtitle">
-            <span>👑</span> Handpicked Royalty <span>👑</span>
+            Handpicked Masterpieces
           </p>
           <h2 className="section-title">Featured Masterpieces</h2>
           <div className="divider" />
@@ -281,8 +290,8 @@ export default function Home() {
           </div>
           <div className="section__cta">
             <Link to="/shop" className="btn btn-gold">
-              <span>View All Pieces 🛍️</span>
-              <FiArrowRight />
+              <span>View All Pieces</span>
+              <FiArrowRight size={15} />
             </Link>
           </div>
         </div>
@@ -292,7 +301,7 @@ export default function Home() {
       <section className="section section--ivory" id="occasion">
         <div className="container">
           <p className="section-subtitle">
-            <span>💫</span> Designed for Every Chapter <span>💫</span>
+            Designed for Every Chapter
           </p>
           <h2 className="section-title">Jewellery for Every Occasion</h2>
           <div className="divider" />
@@ -335,7 +344,7 @@ export default function Home() {
       <section className="section section--cream">
         <div className="container">
           <p className="section-subtitle">
-            <span>✨</span> Just Unveiled <span>✨</span>
+            Just Unveiled
           </p>
           <h2 className="section-title">New Arrivals</h2>
           <div className="divider" />
@@ -344,8 +353,8 @@ export default function Home() {
           </div>
           <div className="section__cta">
             <Link to="/shop?sort=newest" className="btn btn-outline">
-              <span>Discover New Launches 💎</span>
-              <FiArrowRight />
+              <span>Discover New Launches</span>
+              <FiArrowRight size={15} />
             </Link>
           </div>
         </div>
@@ -358,7 +367,7 @@ export default function Home() {
         </div>
         <div className="brand-story__text-side">
           <p className="section-subtitle" style={{ justifyContent: 'flex-start' }}>
-            <span>📖</span> Our Legacy <span>✨</span>
+            Our Legacy
           </p>
           <h2 className="brand-story__title">More Than Jewellery</h2>
           <div className="divider" style={{ margin: '16px 0 24px' }} />
@@ -373,19 +382,20 @@ export default function Home() {
           <div className="brand-story__highlights">
             <div className="bsh-item">
               <span className="bsh-num">10,000+</span>
-              <span className="bsh-lbl">Happy Queens 👑</span>
+              <span className="bsh-lbl">Happy Queens</span>
             </div>
             <div className="bsh-item">
               <span className="bsh-num">100%</span>
-              <span className="bsh-lbl">Certified BIS Polish 💎</span>
+              <span className="bsh-lbl">Certified BIS Polish</span>
             </div>
             <div className="bsh-item">
               <span className="bsh-num">4-Hour</span>
-              <span className="bsh-lbl">NCR Delivery ⚡</span>
+              <span className="bsh-lbl">NCR Delivery</span>
             </div>
           </div>
           <Link to="/about" className="btn btn-gold" style={{ marginTop: '28px' }}>
-            Read Our Heritage Story 📖
+            <span>Read Our Heritage Story</span>
+            <FiArrowRight size={15} />
           </Link>
         </div>
       </section>
@@ -394,7 +404,7 @@ export default function Home() {
       <section className="section section--ivory">
         <div className="container">
           <p className="section-subtitle">
-            <span>💖</span> Testimonials <span>⭐</span>
+            Customer Testimonials
           </p>
           <h2 className="section-title">Loved by Our Queens</h2>
           <div className="divider" />
@@ -402,7 +412,11 @@ export default function Home() {
             {REVIEWS.map((r, i) => (
               <div className="review-card" key={i}>
                 <div className="review-card__header">
-                  <div className="review-card__stars">⭐⭐⭐⭐⭐</div>
+                  <div className="review-card__stars">
+                    {[...Array(r.rating || 5)].map((_, idx) => (
+                      <FiStar key={idx} size={14} fill="#f59e0b" color="#f59e0b" />
+                    ))}
+                  </div>
                   <span className="review-card__badge">{r.badge}</span>
                 </div>
                 <p className="review-card__text">"{r.text}"</p>
@@ -419,7 +433,7 @@ export default function Home() {
       <section className="section section--cream">
         <div className="container container--narrow">
           <p className="section-subtitle">
-            <span>💬</span> Instant Clarity <span>🔍</span>
+            Instant Clarity
           </p>
           <h2 className="section-title">Frequently Asked Questions</h2>
           <div className="divider" />
@@ -438,7 +452,8 @@ export default function Home() {
           </div>
           <div style={{ textAlign: 'center', marginTop: '36px' }}>
             <Link to="/faq" className="btn btn-outline">
-              View Complete iOS Support Guide 📱 →
+              <span>View Complete FAQ Guide</span>
+              <FiArrowRight size={15} />
             </Link>
           </div>
         </div>
@@ -448,7 +463,7 @@ export default function Home() {
       <section className="newsletter">
         <div className="container container--narrow newsletter__inner">
           <span className="badge badge-gold" style={{ marginBottom: '16px' }}>
-            👑 MIRAAYA VIP CIRCLE
+            MIRAAYA VIP CIRCLE
           </span>
           <h2 className="newsletter__title">Be First in Line</h2>
           <p className="newsletter__sub">
@@ -457,17 +472,18 @@ export default function Home() {
           <form className="newsletter__form" onSubmit={handleNewsletter}>
             <input
               type="email"
-              placeholder="Enter your VIP email address... ✉️"
+              placeholder="Enter your VIP email address..."
               value={email}
               onChange={e => setEmail(e.target.value)}
               required
               className="newsletter__input"
             />
             <button type="submit" className="btn btn-gold">
-              Join Club ✨
+              <span>Join Club</span>
+              <FiArrowRight size={15} />
             </button>
           </form>
-          <p className="newsletter__note">🔒 Guaranteed zero spam. Unsubscribe with 1-click anytime.</p>
+          <p className="newsletter__note">Guaranteed zero spam. Unsubscribe with 1-click anytime.</p>
         </div>
       </section>
     </div>
