@@ -76,7 +76,37 @@ Miraaya Jewell/
 
 ---
 
-## 🚀 How to Run on Localhost
+## 🚀 One-Command Run in VS Code (Frontend + Backend)
+
+You can now run both the **Backend (port 5000)** and **Frontend (port 3000)** simultaneously with **a single command** from the project root!
+
+### Option 1: In VS Code Terminal (Recommended)
+Open your VS Code terminal (`Ctrl + \``) and run:
+```bash
+npm run dev
+```
+*(Or `npm start` — both run frontend & backend simultaneously with color-coded live logs)*
+
+### Option 2: Windows 1-Click Batch File
+In your VS Code terminal or PowerShell, run:
+```bash
+.\run.bat
+```
+*(You can also double-click `run.bat` in Windows File Explorer to start everything in one window)*
+
+### Option 3: VS Code Task Shortcut (Zero Terminal Typing)
+Press **`Ctrl + Shift + B`** in VS Code (or go to **Terminal > Run Build Task...**). VS Code will immediately launch both servers in a dedicated integrated terminal pane!
+
+---
+
+### 🌐 Server URLs
+- **Frontend Web App:** [http://localhost:3000](http://localhost:3000)
+- **Backend REST API:** [http://localhost:5000](http://localhost:5000)
+- **API Health Check:** [http://localhost:5000/api/health](http://localhost:5000/api/health)
+
+---
+
+## 🛠️ Manual Step-by-Step Setup (Alternative)
 
 ### Prerequisites
 - [Node.js](https://nodejs.org/) (Version 18.x or 20.x LTS)
@@ -85,29 +115,26 @@ Miraaya Jewell/
 
 ---
 
-### Step 1: Start the Backend Server
+### Step 1: Start the Backend Server Separately
 
 Open Terminal 1:
 ```bash
-cd backend
-npm install
-npm start
+npm run server
 ```
+*(or `cd backend && npm start`)*  
 The backend starts at: **`http://localhost:5000`**  
 Verify health check: **`http://localhost:5000/api/health`**
 
 ---
 
-### Step 2: Start the Frontend Application
+### Step 2: Start the Frontend Application Separately
 
-Open Terminal 2 (split terminal in VS Code using the `+` icon):
+Open Terminal 2:
 ```bash
-cd frontend
-npm install
-npm run dev
+npm run client
 ```
-The frontend starts at: **`http://localhost:3000`**  
-Open your browser and navigate to **[http://localhost:3000](http://localhost:3000)**!
+*(or `cd frontend && npm run dev`)*  
+The frontend starts at: **`http://localhost:3000`**
 
 ---
 
