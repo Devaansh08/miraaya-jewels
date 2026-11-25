@@ -170,6 +170,15 @@ if (require.main === module) {
     console.log(`   Health check: http://localhost:${PORT}/api/health`)
   })
 
+  server.on('error', (err) => {
+    if (err.code === 'EADDRINUSE') {
+      console.error(`❌ Port ${PORT} is currently occupied by another process. Automatic recovery was bypassed.`)
+      process.exit(1)
+    } else {
+      console.error('Server error:', err)
+    }
+  })
+
   // Configure HTTP keep-alive timeouts for high concurrent traffic throughput
   server.keepAliveTimeout = 65000
   server.headersTimeout = 66000
