@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { toast } from 'react-toastify'
-import { FiEye, FiEyeOff, FiMail, FiLock, FiUser, FiArrowRight, FiCheck } from 'react-icons/fi'
+import { FiEye, FiEyeOff, FiMail, FiLock, FiUser, FiArrowRight, FiCheck, FiShield } from 'react-icons/fi'
 import './Auth.css'
 
 export default function Register() {

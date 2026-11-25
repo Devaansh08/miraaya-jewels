@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import {
   FiInstagram, FiFacebook, FiYoutube, FiPhone, FiMail,
-  FiMapPin, FiTruck, FiShield, FiCreditCard, FiAward, FiClock
+  FiMapPin, FiTruck, FiShield, FiCreditCard, FiAward, FiClock, FiRefreshCw
 } from 'react-icons/fi'
 import { FaWhatsapp } from 'react-icons/fa'
 import './Footer.css'
